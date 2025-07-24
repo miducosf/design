@@ -106,7 +106,7 @@ nav .hamburger.open span:nth-child(3) {
   justify-content: space-between;
   width: 100%;
   margin: 0;
-  padding: 3rem 1.5rem;
+  padding: 2rem 1.5rem;
   gap: 2rem;
   /* Apply Memphis-style background pattern behind content */
   background-color: #f9f7f1;
