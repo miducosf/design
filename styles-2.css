@@ -1,0 +1,163 @@
+
+/*
+ * Global styles for the Michael Coleman portfolio website.
+ * This version includes:
+ * - Edge-to-edge Memphis background in the hero section
+ * - Clean hero image with no border-radius or box-shadow
+ * - Responsive and animated elements
+ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-blue: #0ea5e9;
+  --light-bg: #f9f7f1;
+  --font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  background-color: white;
+  color: #333;
+}
+
+header {
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary-blue);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    padding: 1rem;
+    position: absolute;
+    top: 70px;
+    right: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Hero Section */
+.hero {
+  width: 100%;
+  margin: 0;
+  padding: 3rem 1.5rem;
+  background-color: var(--light-bg);
+  background-image: url('assets/memphis-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-content {
+  flex: 1 1 400px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #0284c7;
+}
+
+.hero-image {
+  flex: 1 1 300px;
+  max-width: 350px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.25s;
+}
+
+.hero-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Additional sections can go below */
