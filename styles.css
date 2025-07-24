@@ -156,8 +156,8 @@ nav .hamburger.open span:nth-child(3) {
 .hero-image img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 0px;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
   /* Smooth scaling effect on hover */
   transition: transform 0.25s;
 }
