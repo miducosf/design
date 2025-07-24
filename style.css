@@ -1,0 +1,378 @@
+/*
+ * Global styles for the Michael Coleman portfolio website.
+ * Inspired by the clean, modern aesthetics of the Metric and Milo Webflow templates,
+ * this stylesheet defines a neutral layout with a blue-focused palette and responsive design.
+ */
+
+/* Reset some default spacing and sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS variables for easy colour management */
+:root {
+  --primary-color: #0ea5e9;        /* Sky blue primary tone */
+  --primary-dark: #0284c7;         /* A darker variant for hover states */
+  --primary-light: #e0f2fe;        /* Light blue background for contrast */
+  --text-color: #0f172a;           /* Dark blue-gray for high legibility */
+  --background-color: #f8fafc;     /* Very light background */
+  --gray: #475569;                 /* Neutral gray for secondary text */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background: var(--background-color);
+  line-height: 1.6;
+}
+
+/* Header and navigation */
+header {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  z-index: 999;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+nav .nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav .nav-links li a {
+  font-weight: 500;
+  color: var(--gray);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav .nav-links li a:hover {
+  color: var(--primary-color);
+}
+
+/* Hamburger menu for smaller screens */
+nav .hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+nav .hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--text-color);
+  border-radius: 3px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Transform bars into a cross when menu is open */
+nav .hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+nav .hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+nav .hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  gap: 2rem;
+}
+
+.hero-content {
+  flex: 1 1 300px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.125rem;
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+}
+
+.hero-content .btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero-content .btn:hover {
+  background: var(--primary-dark);
+}
+
+.hero-image {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Portfolio Section */
+.portfolio {
+  background: white;
+  padding: 4rem 1.5rem;
+}
+
+.portfolio h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-dark);
+  margin-bottom: 2rem;
+}
+
+.portfolio-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.portfolio-item {
+  background: var(--primary-light);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.portfolio-item .item-content {
+  padding: 1rem;
+}
+
+.portfolio-item h3 {
+  font-size: 1.25rem;
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-item p {
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+/* Ideas Section */
+.ideas {
+  background: var(--primary-light);
+  padding: 4rem 1.5rem;
+}
+
+.ideas h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-dark);
+  margin-bottom: 2rem;
+}
+
+.ideas-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.idea {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.idea h3 {
+  font-size: 1.2rem;
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.idea p {
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+/* About Section */
+.about {
+  background: white;
+  padding: 4rem 1.5rem;
+}
+
+.about-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-content {
+  flex: 1 1 300px;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 1rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1 1 300px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact {
+  background: var(--primary-light);
+  padding: 4rem 1.5rem;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-dark);
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form button {
+  width: max-content;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: var(--primary-dark);
+}
+
+/* Footer */
+.footer {
+  background: #0f172a;
+  color: #e2e8f0;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  nav .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+    display: none;
+  }
+  nav .nav-links.active {
+    display: flex;
+  }
+  nav .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
