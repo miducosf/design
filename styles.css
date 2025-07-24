@@ -118,6 +118,7 @@ nav .hamburger.open span:nth-child(3) {
 
 .hero-content {
   flex: 1 1 300px;
+  margin-left: 1.5rem;
 }
 
 .hero-content h1 {
