@@ -104,9 +104,9 @@ nav .hamburger.open span:nth-child(3) {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 3rem auto;
-  padding: 0 1.5rem;
+  width: 100%;
+  margin: 0;
+  padding: 3rem 1.5rem;
   gap: 2rem;
   /* Apply Memphis-style background pattern behind content */
   background-color: #f9f7f1;
