@@ -171,8 +171,13 @@ nav .hamburger.open span:nth-child(3) {
 
 /* Portfolio Section */
 .portfolio {
-  background: white;
+  <!-- background: white; -->
   padding: 4rem 1.5rem;
+  background-color: #f9f7f1;
+  background-image: url('assets/memphis-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .portfolio h2 {
