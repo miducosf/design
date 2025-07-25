@@ -151,7 +151,6 @@ nav .hamburger.open span:nth-child(3) {
 
 .hero-image {
   flex: 1 1 225px;
-  max-width: 262px;
   display: flex;
   justify-content: center;
 }
