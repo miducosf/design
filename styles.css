@@ -104,7 +104,7 @@ nav .hamburger.open span:nth-child(3) {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: 100px;
+  margin: 0;
   padding: 0.5rem 0.5rem;
   gap: 0.5rem;
   /* Apply Memphis-style background pattern behind content */
@@ -116,7 +116,7 @@ nav .hamburger.open span:nth-child(3) {
 }
 
 .hero-content {
-  flex: 1 1 300px;
+  flex: 1 1 225px;
   margin-left: 1.5rem;
 }
 
