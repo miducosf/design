@@ -150,7 +150,7 @@ nav .hamburger.open span:nth-child(3) {
 }
 
 .hero-image {
-  flex: 1 1 225px;
+  flex: 1 1 300px;
   display: flex;
   justify-content: center;
 }
