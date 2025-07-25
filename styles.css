@@ -33,9 +33,7 @@ header {
   background: white;
   border-bottom: 1px solid #e2e8f0;
   z-index: 999;
-  max-width: 1400px;
-  align-items: center;
-  <!-- width: 100%; -->
+  width: 100%;
 }
 
 nav {
