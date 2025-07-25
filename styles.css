@@ -44,8 +44,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: lightblue;
-  outline: 1px solid red;
 }
 
 nav .logo {
