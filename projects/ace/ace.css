@@ -1,0 +1,56 @@
+/* ACE Showcase-specific CSS */
+.ace-showcase__top,
+.ace-showcase__bottom {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+}
+
+/* Card headings */
+.ace-showcase__cards > div h2 {
+  @apply text-xl font-semibold mb-2;
+}
+.ace-showcase__cards p,
+.ace-showcase__cards ul {
+  @apply text-base leading-relaxed;
+}
+
+/* Buttons */
+.ace-showcase__buttons .btn-demo {
+  @apply px-5 py-2 rounded-lg text-white font-medium transition;
+  background-color: var(--primary-color);
+}
+.ace-showcase__buttons .btn-demo:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Screenshot */
+.ace-showcase__screenshot img {
+  @apply w-full rounded-xl shadow-lg;
+}
+
+/* Divider */
+.divider {
+  @apply border-0 h-px opacity-20 bg-gray-300;
+}
+
+/* Reflection card */
+.reflection-card {
+  @apply bg-primary-light;
+}
+.reflection-card h2 {
+  @apply text-lg font-semibold mb-3;
+}
+.reflection-card ul {
+  @apply text-base leading-relaxed;
+}
+
+/* Build & Timeline */
+.build-timeline h2 {
+  @apply text-lg font-semibold mb-2;
+}
+.build-timeline p,
+.build-timeline ul {
+  @apply text-base leading-relaxed;
+}
+.build-timeline ul {
+  @apply list-disc ml-5 space-y-2;
+}
