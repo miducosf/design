@@ -29,6 +29,45 @@
   line-height: 1.625;      /* leading-relaxed */
 }
 
+/* 1. Wrap cards in a max‑width & vertical gap */
+.ace-showcase__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;               /* consistent vertical spacing */
+  max-width: 600px;        /* keeps your text from stretching too wide */
+}
+
+/* 2. Style each card with background, padding, rounded corners, shadow */
+.ace-showcase__cards > div {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* 3. Center the screenshot in its column and align to top */
+.ace-showcase__screenshot {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* 4. Tweak button spacing */
+.ace-showcase__buttons {
+  margin-top: 1rem;
+}
+
+/* 5. (Optional) A subtle light‐grey page background to set the cards off */
+body {
+  background-color: #f9fafb; /* Tailwind’s gray-50 */
+}
+
+/* 6. Small typography tweak inside cards (already defined) */
+.ace-showcase__cards > div h2 {
+  margin-bottom: 0.5rem;
+}
+
+
 /* Demo buttons */
 .ace-showcase__buttons .btn-demo {
   display: inline-block;
