@@ -423,15 +423,18 @@ nav .hamburger.open span:nth-child(3) {
   width: 70%;
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 1.5rem auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
 
 .project-content {
+  background-color: var(--primary-light);
   padding: 1.25rem;
+  border-radius: 0 0 1rem 1rem;
 }
+
 
 .project-content h3 {
   margin: 0 0 0.5rem;
