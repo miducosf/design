@@ -52,7 +52,7 @@
   justify-content: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 400px) {
   .ace-showcase__screenshot img {
     width: 50%;
     height: auto;
