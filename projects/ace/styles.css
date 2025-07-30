@@ -1,0 +1,17 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+header { background: #e0f2fe; padding: 1rem; }
+nav { display: flex; justify-content: space-between; max-width: 960px; margin: auto; }
+.logo { font-weight: bold; text-decoration: none; color: #0369a1; }
+.nav-links { list-style: none; display: flex; gap: 1rem; }
+.nav-links a { text-decoration: none; color: #0369a1; }
+.showcase { padding: 2rem; max-width: 960px; margin: auto; }
+.text-image-grid { display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start; }
+.text-block { flex: 1 1 60%; }
+.image-block { flex: 1 1 35%; }
+.image-block img { width: 100%; border-radius: 8px; }
+.grid-two-cols { display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem; }
+.section-divider { margin: 3rem 0; border: none; height: 1px; background: #ccc; }
+.demo-buttons { margin-top: 2rem; display: flex; gap: 1rem; }
+.btn, .btn-outline { padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px; font-weight: bold; }
+.btn { background: #0369a1; color: white; }
+.btn-outline { border: 2px solid #0369a1; color: #0369a1; }
