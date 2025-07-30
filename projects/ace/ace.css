@@ -52,6 +52,13 @@
   justify-content: center;
 }
 
+@media (min-width: 768px) {
+  .ace-showcase__screenshot img {
+    width: 50%;
+    height: auto;
+  }
+}
+
 /* 4. Tweak button spacing */
 .ace-showcase__buttons {
   margin-top: 1rem;
