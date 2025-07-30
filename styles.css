@@ -402,3 +402,51 @@ nav .hamburger.open span:nth-child(3) {
     font-size: 2rem;
   }
 }
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-content {
+  padding: 1.25rem;
+}
+
+.project-content h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  color: #0369a1;
+}
+
+.project-content p {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0 0 0.75rem;
+}
+
+.project-tag {
+  font-size: 0.8rem;
+  color: #3b82f6;
+  background: #dbeafe;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
