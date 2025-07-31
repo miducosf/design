@@ -1,201 +1,186 @@
-/* ACE Showcase-specific CSS */
-
-/* Top & bottom two‑col grid */
-.ace-showcase__top,
-.ace-showcase__bottom {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 2rem; /* matches Tailwind gap-8 */
+/* ====== Wrapper & base ====== */
+.ace-showcase {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  background-color: #f9fafb; /* subtle background to set cards off */
 }
 
-@media (min-width: 768px) {
-  .ace-showcase__top,
-  .ace-showcase__bottom {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+/* ====== Shell header (project title) ====== */
+.ace-shell {
+  padding: 2rem 1rem 1rem;
+}
+.ace-shell h2 {
+  font-size: 2rem;
+  color: var(--primary-dark);
+  margin: 0 0 1rem;
+  text-align: left;
 }
 
-/* Card headings */
-.ace-showcase__cards > div h2 {
-  font-size: 1.25rem;      /* text-xl */
-  font-weight: 600;        /* font-semibold */
-  margin-bottom: 0.5rem;   /* mb-2 */
-}
-
-/* Card text */
-.ace-showcase__cards p,
-.ace-showcase__cards ul {
-  font-size: 1rem;         /* text-base */
-  line-height: 1.625;      /* leading-relaxed */
-}
-
-/* 1. Wrap cards in a max‑width & vertical gap */
-.ace-showcase__cards {
+/* ====== Top layout: challenge/insight/solution + image ====== */
+.about-inner {
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  gap: 2rem;               /* consistent vertical spacing */
-  max-width: 600px;        /* keeps your text from stretching too wide */
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start; /* top-align both sides */
 }
 
-/* 2. Style each card with background, padding, rounded corners, shadow */
-.ace-showcase__cards > div {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+.about-content {
+  flex: 1 1 300px;
+  min-width: 280px;
 }
-
-/* 3. Center the screenshot in its column and align to top */
-.ace-showcase__screenshot {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-@media (min-width: 400px) {
-  .ace-showcase__screenshot img {
-    width: 50%;
-    height: auto;
-  }
-}
-
-/* 4. Tweak button spacing */
-.ace-showcase__buttons {
-  margin-top: 1rem;
-}
-
-/* 5. (Optional) A subtle light‐grey page background to set the cards off */
-body {
-  background-color: #f9fafb; /* Tailwind’s gray-50 */
-}
-
-/* 6. Small typography tweak inside cards (already defined) */
-.ace-showcase__cards > div h2 {
-  margin-bottom: 0.5rem;
-}
-
-
-/* Demo buttons */
-.ace-showcase__buttons .btn-demo {
-  display: inline-block;
-  padding: 0.5rem 1.25rem;       /* py-2 px-5 */
-  border-radius: 0.5rem;         /* rounded-lg */
-  color: #fff;                   /* text-white */
-  font-weight: 500;              /* font-medium */
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  background-color: var(--primary-color);
-}
-.ace-showcase__buttons .btn-demo:hover {
-  background-color: var(--primary-dark);
-}
-
-/* Screenshot styling */
-.ace-showcase__screenshot img {
-  width: 50%;                   /* w-full */
-  border-radius: 0.75rem;        /* rounded-xl */
-  box-shadow:
-    0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px  -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
-  display: block;
-}
-
-/* Section divider */
-.divider {
-  border: none;                  /* border-0 */
-  height: 1px;                   /* h-px */
-  opacity: 0.2;                  /* opacity-20 */
-  background-color: #D1D5DB;     /* bg-gray-300 */
-  margin: 4rem 0;                /* my-16 */
-}
-
-/* Reflection card */
-.reflection-card {
-  background-color: var(--primary-light); /* bg-primary-light */
-  padding: 1.5rem;                         /* p-6 */
-  border-radius: 0.5rem;                   /* rounded-lg */
-}
-.reflection-card h2 {
-  font-size: 1.125rem;     /* text-lg */
-  font-weight: 600;        /* font-semibold */
-  margin-bottom: 0.75rem;  /* mb-3 */
-}
-.reflection-card ul {
-  list-style-type: disc;
-  margin-left: 1.25rem;    /* ml-5 */
-  font-size: 1rem;         /* text-base */
-  line-height: 1.625;      /* leading-relaxed */
-}
-.reflection-card ul li + li {
-  margin-top: 0.5rem;      /* space-y-2 */
-}
-
-/* Build & Timeline */
-.build-timeline h2 {
-  font-size: 1.125rem;     /* text-lg */
-  font-weight: 600;        /* font-semibold */
-  margin-bottom: 0.5rem;   /* mb-2 */
-}
-.build-timeline p,
-.build-timeline ul {
-  font-size: 1rem;         /* text-base */
-  line-height: 1.625;      /* leading-relaxed */
-}
-.build-timeline ul {
-  list-style-type: disc;
-  margin-left: 1.25rem;    /* ml-5 */
-}
-.build-timeline ul li + li {
-  margin-top: 0.5rem;      /* space-y-2 */
-}
-
-.ace-image {
-  flex: 0 0 400px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 0 auto; /* fallback centering if layout collapses */
-}
-
-/* Ensure the image itself is constrained and responsive */
-.ace-image img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  display: block;
-}
-
-/* On small screens when it stacks, keep it centered */
-@media (max-width: 767px) {
-  .ace-image {
-    flex: 1 1 100%;
-    width: 100%;
-    justify-content: center;
-  }
-  .ace-image img {
-    max-width: 90%; /* a bit of horizontal padding */
-  }
-}
-
 
 .ace-list {
-  max-width: 800px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.ace-shell {
-  background: var(--primary-light);
-  padding: 4rem 1.5rem;
+/* Individual idea cards */
+.idea {
+  background: #fff;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.idea h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+.idea p {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  line-height: 1.625;
+}
+.idea ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.625;
+  list-style-type: disc;
+}
+.idea ul li + li {
+  margin-top: 0.5rem;
 }
 
-.ace-shell h2 {
-  text-align: center;
-  font-size: 2rem;
-  color: var(--primary-dark);
-  margin-bottom: 2rem;
+/* ====== Image + buttons column ====== */
+.ace-image {
+  flex: 0 0 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center horizontally when stacked */
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.ace-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px  -2px rgba(0, 0, 0, 0.05);
+  display: block;
+}
+
+/* Buttons below image */
+.ace-showcase__buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+
+.btn-demo {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.25s ease;
+  background-color: var(--primary-color);
+}
+
+.btn-demo:hover {
+  background-color: var(--primary-dark);
+}
+
+/* ====== Divider ====== */
+.divider {
+  border: none;
+  height: 1px;
+  opacity: 0.2;
+  background-color: #D1D5DB;
+  margin: 4rem 0;
+}
+
+/* ====== Bottom section ====== */
+.ace-showcase__bottom {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .ace-showcase__bottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.reflection-card,
+.build-timeline > div {
+  background: #fff;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+}
+
+.reflection-card h2,
+.build-timeline h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.reflection-card ul,
+.build-timeline ul {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.625;
+}
+
+.reflection-card ul li + li,
+.build-timeline ul li + li {
+  margin-top: 0.5rem;
+}
+
+.build-timeline p {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  line-height: 1.625;
+}
+
+/* ====== Responsive adjustments ====== */
+@media (max-width: 767px) {
+  .about-inner {
+    flex-direction: column;
+  }
+  .ace-image {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+  .ace-image img {
+    max-width: 90%;
+  }
 }
