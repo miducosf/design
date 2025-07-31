@@ -9,8 +9,12 @@
 
 /* ====== Shell header (project title) ====== */
 .ace-shell {
+  background-color: var(--primary-color); /* or hardcode e.g. #0ea5e9 */
+  color: white;
   padding: 2rem 1rem 1rem;
+  border-radius: 0.5rem;
 }
+
 .ace-shell h2 {
   font-size: 2rem;
   color: var(--primary-dark);
