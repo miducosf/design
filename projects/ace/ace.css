@@ -93,8 +93,11 @@
 .ace-showcase__buttons {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 0;
+  justify-content: center; /* center the row */
+  flex-wrap: nowrap;       /* keep both on one line if possible */
+  margin-top: 0;           /* tighten spacing under the image */
+  width: 100%;
+  max-width: 500px;   
 }
 
 .btn-demo {
@@ -106,10 +109,18 @@
   text-decoration: none;
   transition: background-color 0.25s ease;
   background-color: var(--primary-color);
+  flex: 0 0 auto;
 }
 
 .btn-demo:hover {
   background-color: var(--primary-dark);
+}
+
+@media (max-width: 500px) {
+  .ace-showcase__buttons {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
 }
 
 /* ====== Divider ====== */
