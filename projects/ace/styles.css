@@ -165,3 +165,48 @@ nav .hamburger.open span:nth-child(3) {
   border-left: 4px solid #0ea5e9;
   margin-bottom: 1rem;
 }
+
+
+/* ACE Section */
+.ace-overview {
+  background: white;
+  padding: 4rem 1.5rem;
+}
+
+.ace-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.ace-left {
+  flex: 1 1 300px;
+}
+
+.ace-left h2 {
+  font-size: 2rem;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+.ace-left p {
+  font-size: 1rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+.ace-right {
+  flex: 1 1 300px;
+}
+
+.ace-image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
