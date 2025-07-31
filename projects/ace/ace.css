@@ -150,11 +150,11 @@ body {
 }
 
 .ace-image {
-  flex: 1 1 240px;
+  flex: 0 0 240px;
 }
 
 .ace-image img {
-  width: 80%;
+  width: 100%;
   border-radius: 8px;
   object-fit: cover;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
