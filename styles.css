@@ -246,18 +246,6 @@ nav .hamburger.open span:nth-child(3) {
   margin-bottom: 2rem;
 }
 
-.ideas ul {
-  margin: 0;
-  padding-left: 1rem;           /* same horizontal rhythm as body text */
-  list-style-position: outside; /* default bullet placement */
-  font-size: 1rem;
-  line-height: 1.625;
-}
-
-.ideas ul li + li {
-  margin-top: 0.5rem; /* spacing between bullet items */
-}
-
 .ideas-list {
   max-width: 800px;
   margin: 0 auto;
@@ -282,6 +270,18 @@ nav .hamburger.open span:nth-child(3) {
 .idea p {
   font-size: 0.9rem;
   color: var(--gray);
+}
+
+.idea ul {
+  margin: 0;
+  padding-left: 1rem;           /* same horizontal rhythm as body text */
+  list-style-position: outside; /* default bullet placement */
+  font-size: 1rem;
+  line-height: 1.625;
+}
+
+.idea ul li + li {
+  margin-top: 0.5rem; /* spacing between bullet items */
 }
 
 /* About Section */
