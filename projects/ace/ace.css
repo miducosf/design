@@ -167,3 +167,15 @@ body {
   flex-direction: column;
   gap: 1.5rem;
 }
+
+.ace-shell {
+  background: var(--primary-light);
+  padding: 4rem 1.5rem;
+}
+
+.ace-shell h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-dark);
+  margin-bottom: 2rem;
+}
