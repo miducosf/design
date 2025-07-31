@@ -65,39 +65,13 @@
       </div>
       <div class="ace-image">
         <img src="../../assets/ACE_screenshot.jpg" alt="ACE AI Coach screenshot" />
-      </div>
-      <div class="ace-showcase__buttons flex gap-4">
+         <div class="ace-showcase__buttons flex gap-4">
           <a href="https://ace-demo-url" target="_blank" rel="noopener" class="btn-demo">View Live Chatbot</a>
           <a href="https://github.com/miducosf/ace-backend" target="_blank" rel="noopener" class="btn-demo">View Demo</a>
         </div>
+      </div>
     </div>
   </section>
-
-    <!-- Top section -->
-    <section class="ace-showcase__top grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-      <div class="ace-showcase__cards space-y-8">
-        <div>
-          <h2>The Challenge</h2>
-          <p>Working with Compliance to approve content should be straightforward, but it’s often not: complex procedures, documentation requirements, and role confusion.</p>
-        </div>
-        <div>
-          <h2>The Insight</h2>
-          <p>Instead of developing another static course, I asked: “What if the experience met users at their moment of need?”</p>
-        </div>
-        <div>
-          <h2>The Solution</h2>
-          <ul class="list-disc ml-5">
-            <li>Deduces just‑in‑time support</li>
-            <li>Reduces reliance on long‑format courseware</li>
-            <li>Creates a scalable AI learning framework</li>
-          </ul>
-        </div>
-        
-      </div>
-      <div class="ace-showcase__screenshot">
-        <img src="../../assets/ACE_screenshot.jpg" alt="ACE AI Coach screenshot" />
-      </div>
-    </section>
 
     <hr class="divider my-16" />
 
@@ -131,19 +105,32 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <ul class="footer-links">
-        <li><a href="../../index.html">Home</a></li>
-        <li><a href="../../projects/index.html">Projects</a></li>
-        <li><a href="../../about.html">About</a></li>
-        <li><a href="../../contact.html">Contact</a></li>
-      </ul>
-      <p>© 2025 Michael Coleman</p>
-    </div>
-  </footer>
+  <section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <form class="contact-form" action="#" method="post">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
+  <footer class="footer">
+    <p>&copy; 2025 Michael&nbsp;Coleman. All rights reserved.</p>
+  </footer>
+  
   <script src="../../script.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('open');
+      });
+    });
+  </script>
+  
 </body>
 </html>
