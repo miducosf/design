@@ -151,16 +151,34 @@ body {
 
 .ace-image {
   flex: 0 0 400px;
+  display: flex;
   justify-content: center;
   align-items: flex-start;
+  margin: 0 auto; /* fallback centering if layout collapses */
 }
 
+/* Ensure the image itself is constrained and responsive */
 .ace-image img {
   width: 100%;
+  max-width: 400px;
   border-radius: 8px;
   object-fit: cover;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: block;
 }
+
+/* On small screens when it stacks, keep it centered */
+@media (max-width: 767px) {
+  .ace-image {
+    flex: 1 1 100%;
+    width: 100%;
+    justify-content: center;
+  }
+  .ace-image img {
+    max-width: 90%; /* a bit of horizontal padding */
+  }
+}
+
 
 .ace-list {
   max-width: 800px;
