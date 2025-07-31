@@ -10,99 +10,6 @@
   <!-- ACE specific CSS -->
   <link rel="stylesheet" href="ace.css" />
 
-  <style>
-  body {
-    font-family: "Poppins", system-ui, -apple-system, sans-serif;
-    background: #f9fafb;
-    margin: 0;
-    padding: 0;
-  }
-  header nav {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    padding: 1rem;
-  }
-  .container {
-    max-width: 64rem;
-    margin: 0 auto;
-    padding: 0 1rem;
-    box-sizing: border-box;
-  }
-  .ace-shell {
-    background: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    margin-bottom: 1rem;
-  }
-  .about-inner {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: flex-start;
-  }
-  .about-content, .ace-image {
-    flex: 1 1 300px;
-    min-width: 280px;
-  }
-  .idea {
-    background: white;
-    padding: 1rem;
-    border-radius: 6px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    margin-bottom: 1rem;
-  }
-  .ace-image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  .ace-image img {
-    max-width: 400px;
-    width: 100%;
-    border-radius: 8px;
-    display: block;
-  }
-  .ace-showcase__buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-  }
-  .btn-demo {
-    background: #0ea5e9;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  .ace-showcase__bottom {
-    display: grid;
-    gap: 1.5rem;
-    margin: 2rem 0;
-  }
-  @media (min-width:768px) {
-    .ace-showcase__bottom {
-      grid-template-columns: repeat(2,1fr);
-    }
-  }
-  .reflection-card, .build-timeline .idea {
-    background: white;
-    padding: 1rem;
-    border-radius: 6px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.04);
-  }
-  .divider {
-    margin: 1rem 0;
-    border: none;
-    height: 1px;
-    background: #d1d5db;
-    opacity: .3;
-  }
-</style>
-
 </head>
 <body>
   <!-- Persistent navigation -->
@@ -168,36 +75,41 @@
 
 <hr class="divider" />
 
-<section class="ace-showcase__bottom">
-  <!-- Reflection card -->
-  <div class="reflection-card">
-    <h2>Reflection</h2>
-    <ul>
-      <li>ACE demonstrates how learning designers can leverage AI not just to build content, but also to create support systems that evolve alongside the learner.</li>
-      <li>This project helped me hone my full-stack prototyping skills while staying grounded in what matters: solving real problems for real users.</li>
-      <li>The next iteration will move to a full Retrieval-Augmented Generative (RAG) model wherein I upload multiple documents for ACE to reference rather than embedding insights directly.</li>
-    </ul>
-  </div>
-
-  <!-- Buildout & Timeline column -->
-  <div class="build-timeline">
-    <div class="idea">
-      <h2>The Buildout</h2>
-      <ul>
-        <li>Designed a modern, bubble-style UI that feels familiar and engaging.</li>
-        <li>Developed an agent personality that builds trust and delivers real insights.</li>
-        <li>Connected the frontend to the OpenAI's GPT API using a secure Node.js backend.</li>
-        <li>Styled the interface for clarity, accessibility, and professionalism.</li>
-      </ul>
+ <!-- The Bottom Section -->
+    <section id="ace-shell" class="ace-shell">
+    <div class="about-inner">
+      <div class="about-content">
+        <div class="ace-list">
+          <div class="idea">
+            <h3>The Reflection</h3>
+                <ul class="list-disc ml-5 space-y-2">   
+                  <li>ACE demonstrates how learning designers can leverage AI not just to build content, but also to create support systems that evolve alongside the learner.</li>
+                  <li>This project helped me hone my full-stack prototyping skills while staying grounded in what matters: solving real problems for real users.</li>
+                  <li>The next iteration will move to a full Retrieval-Augmented Generative (RAG) model wherein I upload multiple documents for ACE to reference rather than embedding insights directly.</li>
+                </ul>
+          </div>
+        </div>
+      </div>
+   <div class="about-content">
+        <div class="ace-list">
+          <div class="idea">
+            <h3>The Buildout</h3>
+              <ul class="list-disc ml-5 space-y-2">   
+                <li>Designed a modern, bubble‑style UI that feels familiar and engaging.</li>
+                <li>Developed an agent personality that builds trust and delivers real insights.</li>
+                <li>Connected the frontend to the OpenAI's GPT API using a secure Node.js backend.</li>
+                <li>Styled the interface for clarity, accessibility, and professionalism.</li>
+              </ul>
+          </div>
+          <div class="idea">
+            <h3>The Timeline</h3>
+               <p><strong>Day 1:</strong> Layout, wireframe, and conversation flow design</p>
+               <p><strong>Day 2:</strong> Frontend development, styling, and mascot integration</p>
+               <p><strong>Day 3:</strong> Backend integration, testing, and live deployment</p>
+          </div>
+        </div>
     </div>
-    <div class="idea">
-      <h2>The Timeline</h2>
-      <p><strong>Day 1:</strong> Layout, wireframe, and conversation flow design</p>
-      <p><strong>Day 2:</strong> Frontend development, styling, and mascot integration</p>
-      <p><strong>Day 3:</strong> Backend integration, testing, and live deployment</p>
-    </div>
-  </div>
-</section>
+  </section>
 
 
 
