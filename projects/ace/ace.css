@@ -151,6 +151,8 @@ body {
 
 .ace-image {
   flex: 0 0 400px;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .ace-image img {
