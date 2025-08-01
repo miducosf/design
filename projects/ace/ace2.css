@@ -135,7 +135,7 @@
 
 /* ====== Bottom section wrapper with dark blue background ====== */
 .ace-showcase__bottom-wrapper {
-  background-color: var(--primary-dark); /* dark blue band */
+  background-color: var(--primary-light); /* light blue band */
   padding: 3rem 1rem;
 }
 
