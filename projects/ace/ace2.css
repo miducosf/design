@@ -72,7 +72,7 @@
 /* Make the screenshot + buttons stick as you scroll, within its parent */
 .ace-image {
   position: sticky;
-  top: 2rem;            /* how far from top of viewport it sticks */
+  top: 4rem;            /* how far from top of viewport it sticks */
   align-self: start;    /* ensure it doesn’t stretch vertically unexpectedly */
   flex: 0 0 400px;
   display: flex;
