@@ -133,13 +133,8 @@
   margin: 1rem 0; /* tightened per earlier request */
 }
 
-/* ====== Bottom section wrapper and header colors ====== */
-.ace-showcase__bottom-wrapper {
-  background-color: var(--primary-light); /* light blue band */
-  padding: 3rem 1rem;
-}
+/* ====== Bottom section header colors ====== */
 
-/* Make card headings the same color as the top-section title */
 .idea h3,
 .reflection-card h2,
 .build-timeline h2 {
@@ -149,25 +144,21 @@
   margin: 0 0 0.5rem;
 }
 
-/* ====== Bottom section grid ====== */
-.ace-showcase__bottom {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  max-width: 64rem;
-  margin: 0 auto;
-  margin-top: 0;
-  position: relative;
-  padding: 3rem 1rem; /* vertical space inside the blue band */
-  z-index: 0;
+/* full-width blue band */
+.ace-bottom-fullwidth {
+  background-color: var(--primary-dark);
+  padding: 3rem 0;
 }
 
-.ace-showcase__bottom::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: var(--primary-dark);
-  z-index: -1;
+/* ====== Bottom section grid ====== */
+.ace-showcase__bottom {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  color: inherit;
 }
 
 @media (min-width: 768px) {
@@ -175,6 +166,10 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+.ace-bottom-fullwidth .reflection-card,
+.ace-bottom-fullwidth .build-timeline > .idea {
+  background: #fff;
 
 .reflection-card,
 .build-timeline > .idea {
