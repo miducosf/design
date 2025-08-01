@@ -132,7 +132,7 @@
 
 /* ====== Bottom section full-width blue band ====== */
 .ace-bottom-fullwidth {
-  background-color: var(--primary-dark);
+  background-color: var(--primary-light);
   padding: 3rem 0;
 }
 
