@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mentor Chat — Scenario-Based Coaching Simulator</title>
+  <meta name="description" content="A scenario-based coaching simulator with branching feedback, closed captions, and accessible video workflows.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="shell">
+    <a class="back-link" href="/milo/projects/"><span aria-hidden="true">←</span> Projects</a>
+    <h1 class="title">Mentor Chat — Scenario-Based Coaching Simulator</h1>
+    <p class="subtitle">Scenario practice with immediate coaching feedback, accessible media, and realistic stakeholder dialogue.</p>
+  </div>
+</header>
+
+<main>
+  <!-- Summary badges -->
+  <section class="shell summary">
+    <ul class="badges">
+      <li><strong>Role:</strong> Learning Experience Designer</li>
+      <li><strong>Focus:</strong> Scenario-based practice, Coaching, Accessibility</li>
+      <li><strong>Tools:</strong> HTML/CSS/JS, Synthesia (VTT), Render</li>
+      <li><strong>Duration:</strong> 2 weeks</li>
+    </ul>
+  </section>
+
+  <!-- Overview -->
+  <section class="shell card overview">
+    <h2>Overview</h2>
+    <p>
+      Mentor Chat is a lightweight practice environment for new managers. Learners explore realistic channels
+      (email, chat, video) and receive immediate coaching feedback. The experience emphasizes accessible video,
+      including <span class="hl">closed captions via WebVTT</span>, clear keyboard navigation, and high-contrast UI.
+    </p>
+  </section>
+
+  <!-- Live Demo CTA -->
+  <section class="shell cta card">
+    <div class="cta-inner">
+      <div class="cta-copy">
+        <h2>See the Demo</h2>
+        <p>Open the interactive demo with videos and captions. Try different responses to see how the coaching adapts.</p>
+        <div class="cta-actions">
+          <a class="btn primary" href="../mentor-chat-demo/index.html">Open Demo</a>
+          <a class="btn" href="https://miducosf.github.io/milo/projects/ace/index.html" target="_blank" rel="noopener">View ACE project</a>
+        </div>
+      </div>
+      <div class="cta-media">
+        <div class="device-frame">
+          <div class="bar"></div>
+          <img src="cover-placeholder.png" alt="Screenshot preview of the Mentor Chat demo (placeholder)">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="shell card process">
+    <h2>Process &amp; Highlights</h2>
+    <div class="grid-2">
+      <div>
+        <h3>Design</h3>
+        <ul>
+          <li>Mapped a short scenario arc with <em>clear decision points</em> and feedback criteria.</li>
+          <li>Kept response options concise with distinct tone and intent.</li>
+          <li>Wrote coaching text that reinforces specific behaviors.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Build</h3>
+        <ul>
+          <li>Modular HTML &amp; CSS; unobtrusive JS for state and layout.</li>
+          <li>Embedded video with <code>&lt;track kind="captions"&gt;</code> for CC via VTT.</li>
+          <li>Responsive layout: side-by-side on wide, stacks on narrow.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Iterate</h3>
+        <ul>
+          <li>Refined copy for clarity and coaching tone.</li>
+          <li>Simplified layout to avoid “mystery meat” interactions.</li>
+          <li>Added debug toggles to speed layout adjustments.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What I’d do next</h3>
+        <ul>
+          <li>Add a transcript auto-render under videos for SEO + a11y.</li>
+          <li>Track attempt analytics to personalize practice.</li>
+          <li>Swap in enterprise player with analytics + chapters.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accessibility -->
+  <section class="shell card a11y">
+    <h2>Accessibility</h2>
+    <ul class="checklist">
+      <li><span aria-hidden="true">✓</span> <strong>Closed captions</strong> via WebVTT (<code>kind="captions"</code>) on all videos.</li>
+      <li><span aria-hidden="true">✓</span> Logical heading structure &amp; labeled controls.</li>
+      <li><span aria-hidden="true">✓</span> Keyboard navigable (visible focus) and reduced motion friendly.</li>
+      <li><span aria-hidden="true">✓</span> Color contrast checks for copy and UI elements.</li>
+    </ul>
+  </section>
+
+  <!-- Screens (placeholders) -->
+  <section class="shell screens">
+    <h2>Screens</h2>
+    <div class="grid-3">
+      <figure class="shot card">
+        <img src="screen-1-placeholder.png" alt="Opening screen placeholder">
+        <figcaption>Opening &amp; coaching bar</figcaption>
+      </figure>
+      <figure class="shot card">
+        <img src="screen-2-placeholder.png" alt="Video chat placeholder">
+        <figcaption>Video chat with CC</figcaption>
+      </figure>
+      <figure class="shot card">
+        <img src="screen-3-placeholder.png" alt="Outcome branch placeholder">
+        <figcaption>Outcome comparison</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Tech details -->
+  <section class="shell card tech">
+    <h2>Technical Notes</h2>
+    <pre class="code">
+&lt;video controls preload="metadata"&gt;
+  &lt;source src="assets/video-chat-simulation.mp4" type="video/mp4"&gt;
+  &lt;track src="assets/video-chat-simulation.vtt" kind="captions" srclang="en" label="English" default&gt;
+&lt;/video&gt;
+    </pre>
+  </section>
+
+  <!-- Next / back -->
+  <nav class="shell next-prev">
+    <a class="btn" href="/milo/">Back to Portfolio</a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <p>&copy; <span id="y"></span> Michael C. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
