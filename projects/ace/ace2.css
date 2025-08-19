@@ -1,10 +1,15 @@
 /* ====== Wrapper & base ====== */
 .ace-showcase {
+  position: relative;
   max-width: 64rem;
   margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
-  var(—primary-light);
+
+  /* light blue background, full bleed */
+  background: var(--primary-light);
+  box-shadow: 0 0 0 100vmax var(--primary-light);
+  clip-path: inset(0 -100vmax);
 }
 
 /* ====== Shell header (project title) ====== */
@@ -130,14 +135,14 @@
 .divider {
   border: none;
   height: 1px;
-  opacity: 0.2;
-  background-color: #D1D5DB;
+  opacity: 0.4; /* slightly stronger so blue is visible */
+  background-color: var(--primary-light); /* match top section */
   margin: 1rem 0;
 }
 
 /* ====== Bottom section full-width blue band ====== */
 .ace-bottom-fullwidth {
-  background-color: var(--primary-light);
+  background-color: #c9dcf6;
   padding: 3rem 0;
 }
 
