@@ -1,10 +1,12 @@
 /* ====== Wrapper & base ====== */
 .ace-showcase {
   position: relative;
-  max-width: 64rem;
-  margin: 0 auto;
-  padding: 0 1rem;
-  box-sizing: border-box;
+  background: var(--primary-light);
+  box-shadow: 0 0 0 100vmax var(--primary-light);
+  clip-path: inset(0 -100vmax);
+  margin-bottom: 0;         /* avoid gap below */
+  padding-bottom: 2rem;     /* use padding instead of child bottom margins */
+}
 
   /* light blue background, full bleed */
   background: var(--primary-light);
@@ -142,9 +144,18 @@
 
 /* ====== Bottom section full-width blue band ====== */
 .ace-bottom-fullwidth {
-  background-color: #b3cde0;
-  padding: 3rem 0;
+  position: relative;
+  /* mid-blue; use your chosen color/mix */
+  background: color-mix(in srgb, var(--primary-light) 65%, var(--primary-dark));
+  box-shadow: 0 0 0 100vmax color-mix(in srgb, var(--primary-light) 65%, var(--primary-dark));
+  clip-path: inset(0 -100vmax);
+  margin-top: 0;            /* avoid gap above */
+  padding: 3rem 0;          /* vertical rhythm lives here, not in child margins */
 }
+
+/* Kill collapsing margins from first/last children so no “seam” shows */
+.ace-showcase > *:last-child { margin-bottom: 0; }
+.ace-bottom-fullwidth > *:first-child { margin-top: 0; }
 
 /* Inner centered grid within the blue band */
 .ace-showcase__bottom {
