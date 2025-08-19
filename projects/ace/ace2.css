@@ -5,13 +5,6 @@
   margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
-
-  /* light blue background, full bleed */
-  background: var(--primary-light);
-  box-shadow: 0 0 0 100vmax var(--primary-light);
-  clip-path: inset(0 -100vmax);
-}
-
   /* light blue background, full bleed */
   background: var(--primary-light);
   box-shadow: 0 0 0 100vmax var(--primary-light);
