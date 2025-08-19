@@ -3,7 +3,7 @@
   position: relative;
   max-width: 64rem;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1rem 2rem;
   box-sizing: border-box;
   /* light blue background, full bleed */
   background: var(--primary-light);
