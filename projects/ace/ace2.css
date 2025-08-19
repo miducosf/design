@@ -4,7 +4,7 @@
   margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
-  background-color: #e5e7eb;
+  var(—primary-light);
 }
 
 /* ====== Shell header (project title) ====== */
