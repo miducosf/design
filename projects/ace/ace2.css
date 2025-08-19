@@ -130,14 +130,7 @@
   }
 }
 
-/* ====== Divider ====== */
-.divider {
-  border: none;
-  height: 1px;
-  opacity: 0.4; /* slightly stronger so blue is visible */
-  background-color: var(--primary-light); /* match top section */
-  margin: 1rem 0;
-}
+
 
 /* ====== Bottom section full-width blue band ====== */
 .ace-bottom-fullwidth {
