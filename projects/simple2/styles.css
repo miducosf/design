@@ -1,18 +1,20 @@
 /* ====== Wrapper & base ====== */
 .ace-showcase {
+  position: relative;
   max-width: 64rem;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1rem 2rem;
   box-sizing: border-box;
-  background-color: #f9fafb; /* subtle background to set cards off */
+  /* light blue background, full bleed */
+  background: var(--primary-light);
+  box-shadow: 0 0 0 100vmax var(--primary-light);
+  clip-path: inset(0 -100vmax);
 }
 
 /* ====== Shell header (project title) ====== */
 .ace-shell {
   padding: 2rem 1rem 1rem;
-  padding-bottom: 1rem;
 }
-
 .ace-shell h2 {
   font-size: 2rem;
   color: var(--primary-dark);
@@ -27,7 +29,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  align-items: flex-start; /* top-align both sides */
+  align-items: flex-start;
 }
 
 .about-content {
@@ -52,6 +54,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin: 0 0 0.5rem;
+  color: var(--primary-dark);
 }
 .idea p {
   margin: 0 0 0.75rem;
@@ -70,14 +73,19 @@
 }
 
 /* ====== Image + buttons column ====== */
+/* Make the screenshot + buttons stick as you scroll, within its parent */
 .ace-image {
+  position: sticky;
+  top: 5rem;            /* how far from top of viewport it sticks */
+  align-self: start;    /* ensure it doesn’t stretch vertically unexpectedly */
   flex: 0 0 400px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* center horizontally when stacked */
-  justify-content: flex-start;
   gap: 1rem;
   margin: 0 auto;
+  /* optional: keep its width bounded so it doesn't grow weirdly */
+  max-width: 400px;
+  /* ensure it doesn’t overlap when near bottom (native with sticky) */
 }
 
 .ace-image img {
@@ -95,13 +103,12 @@
 .ace-showcase__buttons {
   display: flex;
   gap: 1rem;
-  justify-content: center; /* center the row */
-  flex-wrap: nowrap;       /* keep both on one line if possible */
-  margin-top: 0;           /* tighten spacing under the image */
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 0;
   width: 100%;
-  max-width: 500px;   
+  max-width: 500px;
 }
-
 .btn-demo {
   display: inline-block;
   padding: 0.5rem 1.25rem;
@@ -113,11 +120,9 @@
   background-color: var(--primary-color);
   flex: 0 0 auto;
 }
-
 .btn-demo:hover {
   background-color: var(--primary-dark);
 }
-
 @media (max-width: 500px) {
   .ace-showcase__buttons {
     flex-wrap: wrap;
@@ -125,37 +130,38 @@
   }
 }
 
-/* ====== Divider ====== */
-.divider {
-  border: none;
-  height: 1px;
-  opacity: 0.2;
-  background-color: #D1D5DB;
-  margin: 1rem 0;
+
+
+/* ====== Bottom section full-width blue band ====== */
+.ace-bottom-fullwidth {
+  background-color: #b3cde0;
+  padding: 3rem 0;
 }
 
-/* ====== Bottom section ====== */
+
+/* Inner centered grid within the blue band */
 .ace-showcase__bottom {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
   max-width: 64rem;
   margin: 0 auto;
-  margin-top: 0;
+  padding: 0 1rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  color: inherit;
 }
-
 @media (min-width: 768px) {
   .ace-showcase__bottom {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
+/* Cards in bottom section */
 .reflection-card,
-.build-timeline > div {
+.build-timeline > .idea {
   background: #fff;
   padding: 1.25rem 1.5rem;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .reflection-card h2,
@@ -163,8 +169,8 @@
   font-size: 1.125rem;
   font-weight: 600;
   margin: 0 0 0.5rem;
+  color: var(--primary-dark);
 }
-
 .reflection-card ul,
 .build-timeline ul {
   list-style-type: disc;
@@ -173,12 +179,15 @@
   font-size: 1rem;
   line-height: 1.625;
 }
-
 .reflection-card ul li + li,
 .build-timeline ul li + li {
   margin-top: 0.5rem;
 }
-
+.build-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 .build-timeline p {
   margin: 0 0 0.5rem;
   font-size: 1rem;
