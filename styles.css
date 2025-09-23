@@ -233,7 +233,7 @@ nav .hamburger.open span:nth-child(3) {
   color: var(--gray);
 }
 
-/* Ideas Section */
+/* Ideas Section (Strengths) */
 .ideas {
   background: var(--primary-light);
   padding: 4rem 1.5rem;
@@ -246,42 +246,78 @@ nav .hamburger.open span:nth-child(3) {
   margin-bottom: 2rem;
 }
 
-.ideas-list {
-  max-width: 800px;
+/* --- Six-card layout --- */
+.ideas--six .ideas-list {
+  max-width: 1200px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.ideas--six .idea {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 12px;
+  padding: 18px 16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  transition: transform 0.2s ease;
+}
+
+.ideas--six .idea:hover {
+  transform: translateY(-4px);
+}
+
+.ideas--six .idea-head {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
 }
 
-.idea {
-  background: white;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+.ideas--six .idea-icon {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background: rgba(0,0,0,0.05);
 }
 
-.idea h3 {
-  font-size: 1.2rem;
+.ideas--six .idea h3 {
+  font-size: 1.05rem;
+  line-height: 1.2;
+  margin: 0;
   color: var(--primary-dark);
-  margin-bottom: 0.5rem;
 }
 
-.idea p {
-  font-size: 0.9rem;
+.ideas--six .idea p {
+  margin: 6px 0 8px;
+  font-size: 0.95rem;
   color: var(--gray);
 }
 
-.idea ul {
+.ideas--six .idea ul {
   margin: 0;
-  padding-left: 1rem;           /* same horizontal rhythm as body text */
-  list-style-position: outside; /* default bullet placement */
-  font-size: 1rem;
-  line-height: 1.625;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
-.idea ul li + li {
-  margin-top: 0.5rem; /* spacing between bullet items */
+/* Dark-mode friendly tweaks */
+@media (prefers-color-scheme: dark) {
+  .ideas--six .idea {
+    background: rgba(255,255,255,0.04);
+    border-color: rgba(255,255,255,0.08);
+    box-shadow: none;
+  }
+  .ideas--six .idea-icon {
+    background: rgba(255,255,255,0.08);
+  }
 }
 
 /* About Section */
@@ -440,13 +476,11 @@ nav .hamburger.open span:nth-child(3) {
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
-
 .project-content {
   background-color: var(--primary-light);
   padding: 1.25rem;
   border-radius: 0 0 1rem 1rem;
 }
-
 
 .project-content h3 {
   margin: 0 0 0.5rem;
@@ -468,4 +502,3 @@ nav .hamburger.open span:nth-child(3) {
   border-radius: 0.5rem;
   font-weight: 500;
 }
-
