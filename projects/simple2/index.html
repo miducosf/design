@@ -2,135 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ACE AI Coach – Michael Coleman</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SIMPLE – Client Communication Simulation • Michael Coleman</title>
+  <meta name="description" content="SIMPLE is a branching, video‑driven client communication simulation with real‑time mentor feedback, built to strengthen sales conversation skills." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Global CSS -->
-  <link rel="stylesheet" href="../../styles.css" />
-  <!-- ACE specific CSS -->
-  <link rel="stylesheet" href="styles.css" />
-
+  <link rel="stylesheet" href="/design/assets/css/site.css" />
+  <!-- If this page copied ACE styles locally, keep the stylesheet path the same as ACE used. -->
+  <style>
+    /* Page‑specific overrides, if needed */
+    .hero-badge { display:inline-block; padding:.25rem .6rem; border-radius:999px; background: var(--primary-light); color: var(--primary-dark); font-weight:600; font-size:.85rem; }
+    .showcase-img { width:100%; border-radius:16px; box-shadow: 0 6px 24px rgba(2, 132, 199, .15); margin: 1rem 0 1.25rem; }
+    .cta { display:inline-flex; align-items:center; gap:.5rem; padding:.75rem 1rem; border-radius:999px; background: var(--primary-color); color:white; text-decoration:none; font-weight:600; }
+    .cta:hover { background: var(--primary-dark); }
+    .meta-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:1rem; margin-top:.25rem; }
+    .meta-card { background:white; border-radius:16px; padding:1rem; box-shadow:0 1px 6px rgba(15, 23, 42, .06); }
+    .section { margin: 2.5rem 0; }
+    .section h2 { margin-bottom:.75rem; }
+    .list { margin:.5rem 0 0 1.25rem; }
+    .timeline li { margin:.4rem 0; }
+  </style>
 </head>
 <body>
-  <!-- Persistent navigation -->
-    <header>
-    <nav>
-      <a href="../../index.html" class="logo">Michael&nbsp;Coleman</a>
-      <ul class="nav-links">
-        <li><a href="../../index.html">Home</a></li>
-        <li><a href="../../projects/index.html">Projects</a></li>
-        <li><a href="../../about.html">About</a></li>
-        <li><a href="../../contact.html">Contact</a></li>
-      </ul>
-      <div class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <a class="logo" href="/design/">Michael Coleman</a>
+        <ul class="nav-links">
+          <li><a href="/design/">Home</a></li>
+          <li><a href="/design/projects/">Projects</a></li>
+          <li><a href="/design/about/">About</a></li>
+          <li><a href="/design/contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- ACE Showcase Content -->
-  <main class="container ace-showcase">
+  <main>
+    <section class="container section">
+      <span class="hero-badge">Project Two</span>
+      <h1>Project – SIMPLE (Sales Client Communication Simulation)</h1>
+      <p class="lead">A branching, video‑driven <em>choose‑your‑own‑adventure</em> experience that builds confident client communicators through timely mentor feedback and targeted micro‑skills.</p>
 
-<section id="ace-shell" class="ace-shell">
-  <h2>Project - ACE AI Coach</h2>
-  <div class="about-inner">
-    <div class="about-content">
-      <div class="ace-list">
-        <div class="idea">
-          <h3>The Challenge</h3>
-          <p>Getting content approved by Compliance should be straightforward—but often, it’s not. Complex procedures, layered documentation requirements, and unclear roles can overwhelm even experienced professionals. Traditional learning formats fall short of offering immediate, usable answers.</p>
-        </div>
+      <!-- Replace the image src with your SIMPLE key visual -->
+      <img class="showcase-img" src="./assets/simple-key-visual.jpg" alt="SIMPLE simulation – branching video with mentor feedback side panel" />
 
-        <div class="idea">
-          <h3>Considerations</h3>
-          <ul class="list-disc ml-5">
-            <li>Experienced professionals often need quick reminders—not a course.</li>
-            <li>Newcomers need clarity and real-time guidance.</li>
-            <li>Reference guides can be helpful—if you know where to look.</li>
-            <li>Support teams end up fielding the same repetitive questions.</li>
-          </ul>
-        </div>
+      <!-- Update the href to the live SIMPLE prototype when ready -->
+      <p>
+        <a class="cta" href="#" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          View Live Simulation
+        </a>
+      </p>
 
-        <div class="idea">
-          <h3>The Solution</h3>
-          <p><strong>ACE (Assistant for Compliance Excellence)</strong> is an AI-powered digital coach that delivers just-in-time, contextual support—without requiring users to sift through irrelevant content.</p>
-          <ul class="list-disc ml-5">
-            <li>Responds to real user queries with focused, helpful answers</li>
-            <li>Reduces reliance on long-format courseware</li>
-            <li>Improves user efficiency and engagement</li>
-            <li>Creates a scalable foundation for future AI-powered tools</li>
-          </ul>
-        </div>
+      <div class="meta-grid">
+        <div class="meta-card"><strong>Role</strong><br/>Learning & Performance Designer, Prototyper</div>
+        <div class="meta-card"><strong>Focus</strong><br/>Conversation skills, objection handling, discovery</div>
+        <div class="meta-card"><strong>Toolkit</strong><br/>HTML/CSS/JS, Synthesia video, lightweight state engine</div>
+        <div class="meta-card"><strong>Outcome</strong><br/>Faster ramp, consistent messaging, measurable practice</div>
       </div>
-    </div>
+    </section>
 
-    <div class="ace-image">
-      <img src="../../assets/ACE_screenshot.jpg" alt="ACE AI Coach screenshot" />
-      <div class="ace-showcase__buttons flex gap-4">
-        <a href="https://miducosf.github.io/ace-chatbot/" target="_blank" rel="noopener" class="btn-demo">View Live Chatbot</a>
-        <!-- a href="https://github.com/miducosf/ace-backend" target="_blank" rel="noopener" class="btn-demo" View Demo -->
-      </div>
-    </div>
-  </div>
-</section>
+    <section class="container section">
+      <h2>The Challenge</h2>
+      <p>Sales and client‑facing teams need safe practice to build confidence, but traditional courses rarely simulate the pressure and branching choices of a real conversation. Messaging drifts, skills vary by rep, and coaching time is limited.</p>
+    </section>
 
-
-     </main>
-
-
-    <!-- Bottom section with blue background wrapper -->
-<div class="ace-bottom-fullwidth">
-  <div class="ace-showcase__bottom">
-    <!-- Reflection card -->
-    <div class="reflection-card">
-      <h2>Reflection</h2>
-      <ul>
-        <li>ACE shows how learning designers can use AI not just to generate content—but to build adaptive support systems that grow with the learner.</li>
-        <li>This project sharpened my full-stack prototyping skills while staying rooted in what matters most: solving real problems for real users.</li>
-        <li>The next iteration? A fully Retrieval-Augmented Generation (RAG) model that allows ACE to reference multiple uploaded documents—making answers smarter, faster, and more grounded in real process logic.</li>
+    <section class="container section">
+      <h2>Considerations</h2>
+      <ul class="list">
+        <li>Practice must be <strong>fast, repeatable, and relevant</strong> to real calls.</li>
+        <li>Guidance should target <strong>micro‑skills</strong>: rapport, probing, summarizing, next steps.</li>
+        <li>Feedback works best when it is <strong>just‑in‑time</strong> and <strong>actionable</strong>.</li>
+        <li>Leaders need a <strong>repeatable framework</strong> to coach consistently.</li>
       </ul>
+    </section>
+
+    <section class="container section">
+      <h2>The Solution</h2>
+      <p><strong>SIMPLE</strong> is a branching, video‑based simulation with a mentor side‑panel that reacts to choices in real time, reinforcing the behaviors that drive better client outcomes.</p>
+      <ul class="list">
+        <li><strong>Branching video</strong> paths emulate realistic client reactions.</li>
+        <li><strong>Mentor feedback panel</strong> delivers tips, hints, and rationale as you choose.</li>
+        <li><strong>Score rubric</strong> maps choices to core skills (e.g., discovery, empathy, clarity).</li>
+        <li><strong>Retry & reflection</strong> loops encourage deliberate practice.</li>
+        <li><strong>Analytics‑ready events</strong> (choice, time‑to‑answer) for future dashboarding.</li>
+      </ul>
+    </section>
+
+    <section class="container section">
+      <h2>Reflection</h2>
+      <ul class="list">
+        <li>Simulations like SIMPLE shift learning from <em>knowing</em> to <em>doing</em>—building confidence where it matters most: live with a client.</li>
+        <li>The mentor panel balances encouragement with specificity, making coaching scalable without losing the human voice.</li>
+        <li>Next step: plug in a lightweight rubric service so managers can tailor weighting by role or region.</li>
+      </ul>
+    </section>
+
+    <section class="container section">
+      <h2>Buildout</h2>
+      <ul class="list">
+        <li>Produced scenario clips with <strong>Synthesia</strong> for speed and consistency.</li>
+        <li>Implemented a compact <strong>state engine</strong> (vanilla JS) to track choices and surface feedback.</li>
+        <li>Designed a clean, accessible UI with clear affordances and keyboard navigation.</li>
+        <li>Structured events for future <strong>analytics</strong> (CSV export or API hook).</li>
+      </ul>
+    </section>
+
+    <section class="container section">
+      <h2>Timeline</h2>
+      <ul class="list timeline">
+        <li><strong>Day 1:</strong> Scenario mapping, scriptwriting, and rubric design</li>
+        <li><strong>Day 2:</strong> Video production and UI shell</li>
+        <li><strong>Day 3:</strong> Branching logic, mentor feedback, polish</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Michael Coleman. All rights reserved.</p>
     </div>
-
-    <!-- Buildout & Timeline -->
-    <div class="build-timeline">
-      <div class="idea">
-        <h2>Buildout</h2>
-        <ul>
-          <li>Designed a modern, bubble-style UI that feels familiar and engaging.</li>
-          <li>Developed a relatable AI persona that builds trust and delivers insights.</li>
-          <li>Connected the frontend to OpenAI's GPT API using a secure Node.js backend.</li>
-          <li>Styled the interface for clarity, accessibility, and professionalism.</li>
-        </ul>
-      </div>
-      <div class="idea">
-        <h2>Timeline</h2>
-        <p><strong>Day 1:</strong> Ideation, layout wireframing, and conversation flow design</p>
-        <p><strong>Day 2:</strong> Frontend development, styling, and mascot integration</p>
-        <p><strong>Day 3:</strong> Backend integration, testing, refinement, and live deployment</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  <footer class="footer">
-    <p>&copy; 2025 Michael&nbsp;Coleman. All rights reserved.</p>
   </footer>
-  
-  <script src="../../script.js"></script>
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const hamburger = document.querySelector('.hamburger');
-      const navLinks = document.querySelector('.nav-links');
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('open');
-      });
-    });
-  </script>
-  
 </body>
 </html>
